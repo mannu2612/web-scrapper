@@ -15,7 +15,7 @@ public class WordCounter {
 	
 	private Map<String, Integer> getWordCountMap(String text){
 		Map<String, Integer> map = new HashMap<String, Integer>();
-		String words[] = text.split("\\s");
+		String words[] = text.split("\\s+");
 		for (String word : words) {
 			word = word.toLowerCase();
 			int count = map.getOrDefault(word, 0) + 1;
